@@ -1,0 +1,14 @@
+{
+    "folders": [
+        {
+        "path": "."
+        }
+    ]
+    ,"settings":{
+        "python.terminal.activateEnvInCurrentTerminal": true,
+        "python.defaultInterpreterPath": "C:\\Users\\18562\\Desktop\\senior project\\djangofun\\myproject\\env"
+    }
+
+
+
+}
