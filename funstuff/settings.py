@@ -28,12 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-import os
-SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
 
-TEMPLATE_DIRS = (
-    os.path.join(SETTINGS_PATH, 'templates'),
-)
 
 
 # Application definition
@@ -45,8 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'avilabilty',
-    'members',
 ]
 
 MIDDLEWARE = [
@@ -64,7 +57,7 @@ ROOT_URLCONF = 'funstuff.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:\\Users\\18562\\Desktop\\senior project\\djangofun\\myproject\\avilabilty\\templates'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -126,7 +119,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
