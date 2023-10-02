@@ -12,7 +12,7 @@ def login_user(request):
             print("passed")
             login(request, user)
             print("passed")
-            return redirect('/admin/')           
+            return redirect('/emp/')           
         else:
              print("failed")
              messages.success(request, ("error"))
