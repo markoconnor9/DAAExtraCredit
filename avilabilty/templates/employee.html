@@ -1,0 +1,110 @@
+
+
+<form action = "" method="POST">
+  {% csrf_token %}
+
+
+  <input type="submit" name="showExistingAvilabilty" value="Submit">
+
+
+  <br><br>
+
+</form>
+
+
+
+
+
+<form action = "" method="POST">
+  {% csrf_token %}
+  
+  <label for="idNumber">Enter Employee ID Number:</label>
+  <input type="text" id="idNumber" name="idNumber"><br><br>
+
+
+  <label class="checkbox-inline" >
+    Sunday &nbsp&nbsp&nbsp&nbsp &nbsp<input type="checkbox" name="SundayMorning" id="SundayMorning" value="">&nbsp&nbsp&nbsp&nbsp&nbsp
+  </label>
+  <label class="checkbox-inline">
+    <input type="checkbox" name="SundayAfternoon" id="SundayAfternoon" value="">&nbsp&nbsp&nbsp&nbsp&nbsp
+  </label>
+  <label class="checkbox-inline">
+    <input type="checkbox" name="SundayNight" id="SundayNight" value="">
+  </label>
+
+
+  <br><br>
+  <label class="checkbox-inline" >
+    Monday &nbsp&nbsp&nbsp <input type="checkbox" name="MondayMorning" id="MondayMorning" value="">&nbsp&nbsp&nbsp&nbsp&nbsp
+  </label>
+  <label class="checkbox-inline">
+    <input type="checkbox" name="MondayAfternoon" id="MondayAfternoon" value="">&nbsp&nbsp&nbsp&nbsp&nbsp
+  </label>
+  <label class="checkbox-inline">
+    <input type="checkbox" name="MondayNight" id="MondayNight" value="">
+  </label>
+
+  <br><br>
+  <label class="checkbox-inline" >
+    Tuesday &nbsp&nbsp&nbsp <input type="checkbox" name="TuesdayMorning" id="TuesdayMorning" value="">&nbsp&nbsp&nbsp&nbsp&nbsp
+  </label>
+  <label class="checkbox-inline">
+    <input type="checkbox" name="TuesdayAfternoon" id="TuesdayAfternoon" value="">&nbsp&nbsp&nbsp&nbsp&nbsp
+  </label>
+  <label class="checkbox-inline">
+    <input type="checkbox" name="TuesdayNight" id="TuesdayNight" value="">
+  </label>
+
+  <br><br>
+  <label class="checkbox-inline" >
+   Wednesday<input type="checkbox" name="WednesdayMorning" id="WednesdayMorning" value="">&nbsp&nbsp&nbsp&nbsp&nbsp
+  </label>
+  <label class="checkbox-inline">
+    <input type="checkbox" name="WednesdayAfternoon" id="WednesdayAfternoon" value="">&nbsp&nbsp&nbsp&nbsp&nbsp
+  </label>
+  <label class="checkbox-inline">
+    <input type="checkbox" name="WednesdayNight" id="WednesdayNight" value="">
+  </label>
+
+  <br><br>
+  <label class="checkbox-inline" >
+   Thursday &nbsp&nbsp<input type="checkbox" name="ThursdayMorning" id="ThursdayMorning" value="">&nbsp&nbsp&nbsp&nbsp&nbsp
+  </label>
+  <label class="checkbox-inline">
+    <input type="checkbox" name="ThursdayAfternoon" id="ThursdayAfternoon" value="">&nbsp&nbsp&nbsp&nbsp&nbsp
+  </label>
+  <label class="checkbox-inline">
+    <input type="checkbox" name="ThursdayNight" id="ThursdayNight" value="">
+  </label>
+
+  <br><br>
+  <label class="checkbox-inline" >
+  Friday&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="checkbox" name="FridayMorning" id="FridayMorning" value="">&nbsp&nbsp&nbsp&nbsp&nbsp
+  </label>
+  <label class="checkbox-inline">
+    <input type="checkbox" name="FridayAfternoon" id="FridayAfternoon" value="">&nbsp&nbsp&nbsp&nbsp&nbsp
+  </label>
+  <label class="checkbox-inline">
+    <input type="checkbox" name="FridayNight" id="FridayNight" value="">
+  </label>
+
+  <br><br>
+  <label class="checkbox-inline" >
+  Saturday &nbsp&nbsp <input type="checkbox" name="SaturdayMorning" id="SaturdayMorning" value="">&nbsp&nbsp&nbsp&nbsp&nbsp
+  </label>
+  <label class="checkbox-inline">
+    <input type="checkbox" name="SaturdayAfternoon" id="SaturdayAfternoon" value="">&nbsp&nbsp&nbsp&nbsp&nbsp
+  </label>
+  <label class="checkbox-inline">
+    <input type="checkbox" name="SaturdayNight" id="SaturdayNight" value="" checked>
+  </label>
+
+
+
+
+
+
+
+
+  <input type="submit" name="changeAvilabity" value="Submit">
+</form>

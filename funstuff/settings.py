@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'avilabilty',
+    'members',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +59,7 @@ ROOT_URLCONF = 'funstuff.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['C:\\Users\\18562\\Desktop\\senior project\\djangofun\\myproject\\avilabilty\\templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
