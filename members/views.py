@@ -9,10 +9,14 @@ def login_user(request):
         password = request.POST["password"]
         user = authenticate(request, username=username, password=password)
         if user is not None:
-            print("passed")
+           # print("passed")
             login(request, user)
-            print("passed")
-            return redirect('/emp/')           
+           # print("passed")
+            temp = user.employee
+          #  print(temp.auto_increment_id)
+            new_url = "/emp/" + str(temp.auto_increment_id) + "/"
+            print(new_url)
+            return redirect(new_url)           
         else:
              print("failed")
              messages.success(request, ("error"))

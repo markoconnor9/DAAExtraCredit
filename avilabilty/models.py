@@ -13,5 +13,5 @@ class Shift(models.Model):
 class Employee(models.Model):
     auto_increment_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100)
-     #availability = models.ManyToManyField(Shift)
+    availability = models.ManyToManyField(Shift)
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)

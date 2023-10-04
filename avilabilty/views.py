@@ -5,7 +5,7 @@ from .models import Employee
 from .models import Shift
 
 # Create your views here.
-def emp(request):
+def emp(request, employee_key):
 
     # if the user hit the submit button
     if request.method == "POST":
@@ -14,9 +14,7 @@ def emp(request):
         #change avilabilty button was pressed
         if request.POST.get("changeAvilabity"):
         # getting the users id number 
-            idNumber = 0
-            idNumber = request.POST.get('idNumber')
-
+            idNumber = employee_key
             # validating that a number was inputted and that it exist in the data base
             if(idNumber!=""):
                 if Employee.objects.filter(auto_increment_id=idNumber).exists():
@@ -24,8 +22,6 @@ def emp(request):
                     employee.availability.all().delete()
 
                     if "SundayMorning" in request.POST:
-                        print("checked")
-                        print(employee.name)
                         avilableDuring = Shift(day="Sunday", time="morning")
                         avilableDuring.save()
                         employee.availability.add(avilableDuring)
@@ -154,5 +150,7 @@ def emp(request):
                     print("user does not exist")
                 
     employees = Employee.objects.all()
-    return render(request, 'employee.html', {'employees':employees})
+    employee = Employee.objects.get(auto_increment_id=employee_key)
+    employee_name = employee.name
+    return render(request, 'employee.html', {'employee_key':employee_key, 'employee_name':employee_name})
    #return HttpResponse('Hello world')

@@ -19,7 +19,7 @@ from django.urls import path, include
 from avilabilty import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-     path('emp/', views.emp),
+     path('emp/<str:employee_key>/', views.emp, name='employee_key'),
     path('members/', include('django.contrib.auth.urls')),
      path('members/', include('members.urls')),
      ]
