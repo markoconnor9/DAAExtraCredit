@@ -22,4 +22,5 @@ urlpatterns = [
      path('emp/<str:employee_key>/', views.emp, name='employee_key'),
     path('members/', include('django.contrib.auth.urls')),
      path('members/', include('members.urls')),
+     path('check/', views.check),
      ]

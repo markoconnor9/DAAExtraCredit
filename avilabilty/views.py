@@ -3,7 +3,7 @@ from django.http import Http404
 from django.http import HttpResponse
 from .models import Employee
 from .models import Shift
-
+from .forms import *
 # Create your views here.
 def emp(request, employee_key):
 
@@ -153,4 +153,12 @@ def emp(request, employee_key):
     employee = Employee.objects.get(auto_increment_id=employee_key)
     employee_name = employee.name
     return render(request, 'employee.html', {'employee_key':employee_key, 'employee_name':employee_name})
+
+
+
+
+def check(request):
+    print("h")
+    form = selectForm()
+    return render(request, 'check.html', {"form":form})
    #return HttpResponse('Hello world')
