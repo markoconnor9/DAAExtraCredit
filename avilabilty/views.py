@@ -19,7 +19,7 @@ def emp(request, employee_key):
             if(idNumber!=""):
                 if Employee.objects.filter(auto_increment_id=idNumber).exists():
                     employee = Employee.objects.get(auto_increment_id = idNumber)
-                    employee.availability.all().delete()
+                    employee.availability.clear()
 
                     if "SundayMorning" in request.POST:
                         avilableDuring = Shift(day="Sunday", time="morning")
