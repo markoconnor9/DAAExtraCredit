@@ -1,10 +1,12 @@
+{% block content %}
+
+<h1>Hello {{ employee_name }}   </h1>
 
 
 <form action = "" method="POST">
   {% csrf_token %}
 
 
-  <input type="submit" name="showExistingAvilabilty" value="Submit">
 
 
   <br><br>
@@ -17,11 +19,9 @@
 
 <form action = "" method="POST">
   {% csrf_token %}
-  
-  <label for="idNumber">Enter Employee ID Number:</label>
-  <input type="text" id="idNumber" name="idNumber"><br><br>
 
 
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 6am-12pm 12pm-4pm            4pm-10pm</p>
   <label class="checkbox-inline" >
     Sunday &nbsp&nbsp&nbsp&nbsp &nbsp<input type="checkbox" name="SundayMorning" id="SundayMorning" value="">&nbsp&nbsp&nbsp&nbsp&nbsp
   </label>
@@ -96,7 +96,7 @@
     <input type="checkbox" name="SaturdayAfternoon" id="SaturdayAfternoon" value="">&nbsp&nbsp&nbsp&nbsp&nbsp
   </label>
   <label class="checkbox-inline">
-    <input type="checkbox" name="SaturdayNight" id="SaturdayNight" value="" checked>
+    <input type="checkbox" name="SaturdayNight" id="SaturdayNight" value="">
   </label>
 
 
@@ -108,3 +108,6 @@
 
   <input type="submit" name="changeAvilabity" value="Submit">
 </form>
+
+
+{% endblock %}
